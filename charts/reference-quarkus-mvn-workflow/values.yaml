@@ -1,14 +1,15 @@
 global:
-  nameOverride: reference-quarkus-mvn-workflow
+  nameOverride: reference-quarkus-mvn-workflow-eve
 
-  applicationName: ref-quarkus-mvn-tekton-std
+  applicationName: ref-quarkus-mvn-tekton-eve
   serviceName: fruit
 
-  eventListenerIngressHost: el-ref-quarkus-mvn-tekton-std-fruit.apps.tssc.rht-set.com
+  eventListenerIngressHost: el-ref-quarkus-mvn-tekton-eve-fruit.apps.tssc.rht-set.com
+  eventListenerRouteHostOverride: el-ref-quarkus-mvn-tekton-eve-fruit.apps.tssc.rht-set.com
 
   cleanupPipelineRunsToKeep: 4
 
-  stepRunnerConfigDir: cicd/ploigos-step-runner-config/
+  stepRunnerConfigDir: cicd/tekton/everything/ploigos-step-runner-config/
 
   tektonGitSSHKeys:
     gitea:
@@ -23,14 +24,14 @@ global:
   workflowWorkerHomeDirPVCRequestSize: 20Gi
   workflowWorkerAppDirPVCRequestSize: 1Gi
 
-  workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.16.0'
-  workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.16.0'
-  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.16.0'
-  workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.16.0'
-  workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.16.0'
-  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.16.0'
-  workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:v0.16.0'
-  workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.16.0'
-  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.16.0'
-  workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.16.0'
-  workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.16.0'
+  workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.17.0'
+  workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.17.0'
+  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.17.0'
+  workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.17.0'
+  workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.17.0'
+  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.17.0'
+  workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:v0.17.0'
+  workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.17.0'
+  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.17.0'
+  workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.17.0'
+  workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.17.0'
