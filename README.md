@@ -2,7 +2,7 @@
 The cloud resources for the [reference-quarkus-mvn](https://github.com/ploigos-reference-apps/reference-quarkus-mvn)
 application when using Tekton and the Everything workflow.
 
-## Install
+### Install
 
 ### 0. Prerequisite
 
